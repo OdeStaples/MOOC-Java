@@ -171,7 +171,7 @@ You wrote true
 
 ```java
 Integer myInt = new Integer(10);
-int myPrimitiveInt = myInt.intValue();
+int myPrimitiveInt = myInt.intValue(); // The intValue() method converts the Integer object to a primitive int. This was especially necessary before Java 5, when automatic conversion (autoboxing/unboxing) was not available.
 ```
 
 - In this example, we create an Integer object wrapper around the primitive int value 10. We then use the intValue() method to get the primitive int value back.
