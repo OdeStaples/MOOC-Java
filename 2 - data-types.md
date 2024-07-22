@@ -125,7 +125,7 @@ System.out.println(value); // 42.42
 
 - Boolean variables can either have the value `true` or `false`. When converting a string to a boolean, the string must be "true" if we want the boolean value to be `true`. The case is insensitive here: both "true" and "TRue" turn into the boolean value of `true`. All other strings turn into the boolean `false`.
 
-- On the contrary, you can use `nextBoolean()` to read an integer input from the user.
+- On the contrary, you can use `nextBoolean()` to read an integer input from the user (it doesn't convert string to int type as `Boolean.valueOf` does).
 
 ```java
 import java.util.Scanner;
