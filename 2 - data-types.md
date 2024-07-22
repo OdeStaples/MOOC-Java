@@ -207,6 +207,6 @@ int i = myInteger; // Unboxing
 ```
 
 - Autoboxing and unboxing can be used in a variety of situations, such as:
-  > When passing primitive values to methods that expect object parameters
-  > When storing primitive values in collections
-  > When performing arithmetic operations on primitive values
+  - When passing primitive values to methods that expect object parameters
+  - When storing primitive values in collections
+  - When performing arithmetic operations on primitive values
