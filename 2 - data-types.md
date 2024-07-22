@@ -90,11 +90,13 @@ value = floatingPoint; // Neither does this
 
 - The `Integer.valueOf` command converts a string to an integer. It takes the string containing the value to be converted as a parameter.
 
-- On the contrary, you can use `nextInt()` to read an integer input from the user.
+- On the contrary, you can use `nextInt()` to read an integer input from the user (it doesn't convert string to int type as `Integer.valueOf` does).
 
 ```java
 String valueAsString = "42";
 int value = Integer.valueOf(valueAsString);
+
+Scanner scanner = new Scanner(System.in);
 int anotherValue = scanner.nextInt();
 
 System.out.println(value); // 42
