@@ -70,7 +70,7 @@ String first = reader.nextLine();
 System.out.println("Enter the second string");
 String second = reader.nextLine();
 
-if (first == second) {
+if (first == second) { // The == operator checks for reference equality, meaning it checks if first and second point to the same object in memory.
     System.out.println("The strings were the same!");
 } else {
     System.out.println("The strings were different!");
@@ -86,7 +86,9 @@ The strings were different!
 
 - This has to do with the internal workings of strings as well as how variable comparison is implemented in Java. In practice, the comparison is affected by how much information a variable can hold — strings can hold a limitless amount of characters, whereas integers, floating-point numbers, and boolean values always contain a single number or value only. Variables that always contain only one number or value can be compared using an equals sign, whereas this doesn't work for variables containing more information. We will return to this topic later in this course.
 
-- When comparing strings we use the `equals`-command, which is related to string variables. The command works in the following way:
+- Each call to `nextLine()` creates a new `String` object, even if the input is the same.
+
+- When comparing strings we use the `equals` command, which is related to string variables. The command works in the following way:
 
 ```java
 Scanner reader = new Scanner(System.in);
@@ -119,8 +121,11 @@ Great! You read the instructions correctly.
 Scanner reader = new Scanner(System.in);
 
 System.out.println("Input two strings");
-String first = reader.nextLine();
-String second = reader.nextLine();
+String first = reader.nextLine(); // creates a new String object
+String second = reader.nextLine(); // creates a new String object
+
+String s1 = "Hello";
+String s2 = "Hello";
 
 if (first.equals(second)) {
     System.out.println("The strings were the same!");
@@ -136,19 +141,27 @@ if (second.equals("two strings")) {
     System.out.println("Sneaky!");
 }
 
+System.out.println(s1 == s2);  // true
+
 /*OUTPUT
 Input two strings
 ->hello
 ->world
 The strings were different!
+true
 
 Input two strings
 ->two strings
 ->world
 The strings were different!
 Clever!
+true
 */
 ```
+
+- In the above example s1 and s2 are string literals. In Java, string literals are interned, meaning they are stored in a common pool.
+
+- When you create string literals with the same content, they point to the same object in the string pool.
 
 # Logical Operators
 
