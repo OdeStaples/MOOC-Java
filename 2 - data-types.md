@@ -107,11 +107,13 @@ System.out.println(anotherValue); // 40
 
 - The `Double.valueOf` command converts a string to a double. It takes the string containing the value to be converted as a parameter.
 
-- On the contrary, you can use `nextDouble()` to read an integer input from the user.
+- On the contrary, you can use `nextDouble()` to read an decimal input from the user (it doesn't convert string to int type as `Double.valueOf` does)..
 
 ```java
 String valueAsString = "42.42";
 double value = Double.valueOf(valueAsString);
+
+Scanner sc = new Scanner(System.in);
 double decimal = sc.nextDouble();
 
 System.out.println(value); // 42.42
